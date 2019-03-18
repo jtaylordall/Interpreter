@@ -9,6 +9,7 @@ myParser::myParser(vector<Token> in) {//Automatically initiates parsing when myP
   i = 0;
   tok = v.at(i);
   dom = Predicate("Domain");
+  worked = false;
   catchErrors();
 }
 
@@ -327,6 +328,8 @@ void myParser::catchErrors(){//if catches errors, prints failure. else prints su
     return;
   }
   //dat.output(); //removed for interpreter stage
+  worked = true;
+  return;
 }
 
 DatalogProgram myParser::datalogProgram(){//Runs through datalogProgram and catches any errors thrown
@@ -390,4 +393,8 @@ void myParser::add_domain(string in){//Adds strings to domain
 void myParser::error(){//throws an error and increments i
   throw tok;
   i++;
+}
+
+bool myParser::success(){
+  return worked;
 }

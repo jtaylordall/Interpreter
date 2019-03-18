@@ -9,9 +9,7 @@
 
 using namespace std;
 
-class Tuple
-{
-
+class Tuple{
 private:
   vector<string> v; //vector containing Tuple elements as strings
   string v0; //first element of Tuple, used for ordering Tuples in a set
@@ -29,5 +27,4 @@ public:
   bool operator <(const Tuple &right) const{//Compares Tuples based on first element
     return v0 < right.v0;
   }
-
 };

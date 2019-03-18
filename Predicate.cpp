@@ -19,7 +19,6 @@ void Predicate::addParam_D(string p){//Adds new strings to Domain predicate if d
   bool exists = false;
   for(int i = 0; i < v_size; i++){
     string here = parlist.at(i);
-    //cout << p << "(new) vs. " << here << "(old)\n";
     if(p == here){
       exists = true;
     }

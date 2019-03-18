@@ -7,8 +7,7 @@
 
 using namespace std;
 
-class Scheme
-{
+class Scheme{
 private:
   vector<string> att; //vector containing Scheme attributes as strings
 

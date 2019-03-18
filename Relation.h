@@ -9,9 +9,7 @@
 
 using namespace std;
 
-class Relation
-{
-
+class Relation{
 private:
   string name;
   Scheme sch;

@@ -8,10 +8,7 @@
 
 using namespace std;
 
-class Token
-{
-  friend class myScanner;
-
+class Token{
 private:
   int line; //line number of token
   int type; //token type as an int (enum)

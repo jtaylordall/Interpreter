@@ -4,11 +4,14 @@ using namespace std;
 
 myScanner::myScanner(string in) //constructor, automatically runs scanner
 {
+  worked = false;
   file = in;
   doScan();
 }
 
-myScanner::myScanner(){}
+myScanner::myScanner(){
+  worked = false;
+}
 
 char myScanner::lookAhead(int a, string fc) //looks one char ahead in the string
 {
@@ -332,6 +335,7 @@ void myScanner::doScan() //scans the file for tokens
     }
   }
   //testprint(); //not needed for Lab 2
+  worked = true;
   return;
 }
 
@@ -348,4 +352,8 @@ string myScanner::getFile(){
   f.close();
   string fileContents = buf.str();
   return fileContents;
+}
+
+bool myScanner::success(){
+  return worked;
 }

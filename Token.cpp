@@ -1,7 +1,5 @@
 #include "Token.h"
 
-using namespace std;
-
 string Token::getType() //converts type from int (enum) into string
 {
   switch(type)

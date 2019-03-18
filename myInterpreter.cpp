@@ -19,7 +19,7 @@ void myInterpreter::readin(){//Reads Tokens into the Database
     readfacts();
     break;
   }
-//  db.print();
+  db.print();
   return;
 }
 

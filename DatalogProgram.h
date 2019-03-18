@@ -1,13 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include <fstream>
 #include <cstdlib>
-#include <vector>
 #include <string>
-#include <sstream>
-#include "Predicate.h"
-#include "Rule.h"
 
 using namespace std;
 

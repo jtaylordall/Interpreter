@@ -2,11 +2,9 @@
 #define MY_PARSER_H
 
 #include <iostream>
-#include <fstream>
 #include <cstdlib>
 #include <string>
 #include <vector>
-#include <cctype>
 #include "Token.h"
 #include "DatalogProgram.h"
 #include "Parameter.h"
@@ -16,15 +14,13 @@
 using namespace std;
 
 // scans input string
-class myParser
-{
-  friend class Token;
-
+class myParser{
 private:
   vector<Token> v; //vector of Tokens passed in from myScanner
   int i;
   Token tok;
   Predicate dom;
+  bool worked;
 
   //Parameter Grammars
   void parameter(Predicate *pred);
@@ -72,6 +68,7 @@ private:
 public:
   //Constructor
   myParser(vector<Token> in);
+  bool success();
 
   //Tokentype Enum
   enum Tokentype{

@@ -14,9 +14,7 @@
 
 using namespace std;
 
-class myInterpreter
-{
-
+class myInterpreter{
 private:
   vector<Token> v;
   int i;

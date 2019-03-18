@@ -12,8 +12,7 @@
 
 using namespace std;
 
-class Database
-{
+class Database{
 private:
   map<string, Relation> db;
 
