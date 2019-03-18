@@ -29,7 +29,7 @@ public:
   //Database
   void readin(); //Reads Tokens into the Database
   void readschemes(); //Creates Relations from Schemes
-  void readfacts(); {//Creates Tuples from Facts, adds to appropriate Relation
+  void readfacts(); //Creates Tuples from Facts, adds to appropriate Relation
 
   //Interpreter
   void readqueries(); //not yet implemented

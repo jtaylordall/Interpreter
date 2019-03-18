@@ -27,6 +27,8 @@ public:
   string getName(); //Returns name of Relation
   void addTuple(Tuple t); //Adds new Tuple to relation
   void print(); //couts Relation
+
+  //Relational Operations
   void select(); //not yet implemented
   void project(); //not yet implemented
   void rename(); //not yet implemented
