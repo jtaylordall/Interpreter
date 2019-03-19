@@ -1,5 +1,4 @@
-#ifndef MY_INTERPRETER_H
-#define MY_INTERPRETER_H
+#pragma once
 
 #include <iostream>
 #include <cstdlib>
@@ -55,5 +54,3 @@ public:
     _eof
   };
 };
-
-#endif

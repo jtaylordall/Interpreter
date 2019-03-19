@@ -17,9 +17,11 @@ void myInterpreter::readin(){//Reads Tokens into the Database
   while(i < vSize && v.at(i).getTypeint() != _eof){
     readschemes();
     readfacts();
+    db.print();
     break;
   }
-  db.print();
+  Database db2 = db.test();
+  db2.print();
   return;
 }
 

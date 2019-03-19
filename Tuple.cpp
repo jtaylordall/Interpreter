@@ -5,9 +5,9 @@ Tuple::Tuple(){}
 
 Tuple::Tuple(vector<string> v_in){
   v = v_in;
-  if(v.size() > 0){
+/*  if(v.size() > 0){
     v0 = v.at(0);
-  }
+  }*/
 }
 
 
@@ -28,4 +28,8 @@ string Tuple::toString(){//Returns Tuple as a string
 
 vector<string> Tuple::getTuple(){//Returns Tuple as a vector of strings
   return v;
+}
+
+int Tuple::getSize(){
+  return v.size();
 }

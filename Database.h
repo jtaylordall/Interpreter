@@ -9,6 +9,8 @@
 #include <set>
 #include <map>
 #include "Relation.h"
+#include "Tuple.h"
+#include "Scheme.h"
 
 using namespace std;
 
@@ -23,5 +25,6 @@ public:
   //Member Funtions
   void addRelation(Relation r); //adds Relation with linked name to Database
   void print(); //couts Database by relations
+  Database test(); //couts Database by relations
   map<string, Relation>::iterator find(string in); //Returns iterator of relation with desired name
 };

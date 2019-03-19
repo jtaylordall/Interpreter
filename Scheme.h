@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <vector>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -18,4 +19,5 @@ public:
 
   //Member Functions
   vector<string> getScheme(); //Returns Scheme as a vector
+  string toString();
 };
