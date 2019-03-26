@@ -13,14 +13,14 @@ vector<string> Scheme::getScheme(){//Returns Scheme as a vector
   return att;
 }
 
-string Scheme::toString(){
+string Scheme::toString(){//Returns Scheme as a string
   stringstream ss;
   int attSize = att.size();
   ss << "(";
   for(int a = 0; a < attSize; a++){
     ss << att.at(a);
     if(a != attSize - 1){
-      ss << ", ";
+      ss << ",";
     }
   }
   ss << ")";

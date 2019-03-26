@@ -3,7 +3,9 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <sstream>
 #include <vector>
+#include <map>
 #include "Token.h"
 #include "myParser.h"
 #include "Database.h"
@@ -18,6 +20,7 @@ private:
   vector<Token> v;
   int i;
   Database db;
+  vector<Relation> output;
 
 public:
   //Constructor
@@ -25,12 +28,18 @@ public:
 
   //Database
   void readin(); //Reads Tokens into the Database
-  void readschemes(); //Creates Relations from Schemes
-  void readfacts(); //Creates Tuples from Facts, adds to appropriate Relation
+  void readschemes(); //Creates Relations from Schemes, called by readin()
+  void readfacts(); //Creates Tuples from Facts, adds Tuples to appropriate Relation, called by readin()
+  void readrules(); //Skips past all rules, called by readin()
 
   //Interpreter
-  void readqueries(); //not yet implemented
-  bool assessquery(Tuple t); //not yet implemented
+  void readqueries(); //Reads in queries, assesses them, and stores product in output vector, called by readin()
+  Relation assessquery(Tuple t, Relation r); //runs relational operators on a query, assists readqueries()
+  map<string, vector<int>> checkSameness(Tuple t); //evaluates common parameters in aquery, assists assessquery()
+  vector<int> varPositions(vector<string> vsch); //finds and returns position of variables within a query, assists assessquery()
+  vector<string> removeDuplicates(vector<string> in); //removes duplicates in vector of strings, assists projection stage in assessquery()
+  vector<int> removeDuplicates_pos(vector<string> in); //returns positions of vector without duplicates, assists projection stage in assessquery()
+  void print_output(); //iterates through output vector and format-prints each Relation, called by readin()
 
   //Tokentype Enum
   enum Tokentype{

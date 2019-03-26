@@ -334,7 +334,7 @@ void myScanner::doScan() //scans the file for tokens
       }
     }
   }
-  //testprint(); //not needed for Lab 2
+  //testprint(); //not needed for past lab 1
   worked = true;
   return;
 }

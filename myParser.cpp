@@ -7,6 +7,7 @@ myParser::myParser(vector<Token> in) {//Automatically initiates parsing when myP
   v = in;
   remove_comments(); //Removes comment tokens from vector v
   i = 0;
+  v2 = v;
   tok = v.at(i);
   dom = Predicate("Domain");
   worked = false;
@@ -397,4 +398,8 @@ void myParser::error(){//throws an error and increments i
 
 bool myParser::success(){
   return worked;
+}
+
+vector<Token> myParser::getTokens(){
+  return v2;
 }

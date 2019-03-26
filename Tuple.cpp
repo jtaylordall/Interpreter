@@ -19,7 +19,7 @@ string Tuple::toString(){//Returns Tuple as a string
   for(int a = 0; a < vSize; a++){
     ss << v.at(a);
     if(a != vSize - 1){
-      ss << ", ";
+      ss << ",";
     }
   }
   ss << ")";
@@ -30,6 +30,6 @@ vector<string> Tuple::getTuple(){//Returns Tuple as a vector of strings
   return v;
 }
 
-int Tuple::getSize(){
+int Tuple::getSize(){//Returns size of v
   return v.size();
 }

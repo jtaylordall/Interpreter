@@ -12,7 +12,6 @@ using namespace std;
 class Tuple{
 private:
   vector<string> v; //vector containing Tuple elements as strings
-//  string v0; //first element of Tuple, used for ordering Tuples in a set; no longer needed
 
 public:
   //Constructors
@@ -22,10 +21,10 @@ public:
   //Member Functions
   string toString(); //Returns Tuple as a strin
   vector<string> getTuple(); //Returns Tuple as a vector of strings
-  int getSize();
+  int getSize(); //Returns size of v
 
   //Operators
-  bool operator <(const Tuple &right) const{//Compares Tuples by vectors
+  bool operator <(const Tuple &right) const{//Compares Tuples by vectors, used for ordering Tuples in a set
     return v < right.v;
   }
 };

@@ -17,6 +17,7 @@ using namespace std;
 class myParser{
 private:
   vector<Token> v; //vector of Tokens passed in from myScanner
+  vector<Token> v2;
   int i;
   Token tok;
   Predicate dom;
@@ -69,6 +70,7 @@ public:
   //Constructor
   myParser(vector<Token> in);
   bool success();
+  vector<Token> getTokens();
 
   //Tokentype Enum
   enum Tokentype{

@@ -19,5 +19,5 @@ public:
 
   //Member Functions
   vector<string> getScheme(); //Returns Scheme as a vector
-  string toString();
+  string toString(); //Returns Scheme as a string
 };
